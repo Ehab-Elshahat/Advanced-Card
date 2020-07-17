@@ -1,0 +1,229 @@
+body {
+  background-color: #ECEFF1;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.body-title {
+  text-align: center;
+}
+
+.card-container {
+  width: 70%;
+  margin: auto;
+  background-color: #FFF;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card-container .card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #2eca7f;
+  color: #FFF;
+}
+
+.card-header .header-left {
+  display: flex;
+  justify-content: center;
+}
+
+.card-header .header-left .person-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #FFF;
+  padding: 3px;
+  border: 1px solid #CCC;
+  margin-right: 10px;
+}
+
+.header-left .person-info h3 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-weight: bolder;
+  margin: 0;
+}
+.header-left .person-info p {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-right h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.header-right .social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.header-right .social li {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #2eca7f;
+  background-color: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.header-right .social li:not(:last-child) {
+  margin-right: 10px;
+}
+.header-right .social li:hover{
+  transform: scale(.8);
+}
+.card-container .card-body {
+  display: flex;
+  justify-content: space-between;
+}
+.card-body .box {
+  width: calc(96% / 3);
+}
+.card-body .box:nth-child(1) {
+  flex: 2;
+}
+.card-body .box:nth-child(2) {
+  flex: 4;
+}
+.card-body .box:nth-child(3) {
+  flex: 4;
+  padding: 10px 20px;
+}
+.card-body .box .links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.card-body .box .links li {
+  font-weight: bold;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 15px 0;
+  color: #4f4d4d;
+  cursor: pointer;
+  position: relative;
+}
+.card-body .box .links li.active {
+  color: #2eca7f;
+}
+.card-body .box .links li.active::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #2eca7f;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card-body .box .links li span {
+  margin: 0 5px;
+}
+.card-body .box img {
+  width: 100%;
+}
+.card-body .box h3 {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #4f4d4d;
+  font-size: 28px;
+  margin-top: 50px;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #2eca7f;
+  display: inline-block;
+  position: relative;
+}
+.card-body .box h3::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 5px;
+  background-color: #2eca7f;
+  border-radius: 2px;
+  left: 0;
+  bottom: -3px;
+}
+.card-body .box p {
+  color: #b0a9a9;
+  line-height: 1.7;
+}
+.card-body .contact-me {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.card-body .contact-me li {
+  color: #4f4d4d;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.card-body .contact-me li span {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+.card-body .more {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #2eca7f;
+  color: #FFF;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+.card-body .more span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 14px;
+  background-color: #FFF;
+  color: #2eca7f;
+  margin-right: 5px;
+}
+
+@media(max-width: 767px) {
+  .card-container .card-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-container .card-header .header-left,
+  .card-container .card-header .header-right {
+    text-align: center;
+  }
+  .card-container .card-header .header-left {
+    margin-bottom: 20px;
+  }
+  .card-container .card-body {
+    display: block !important;
+  }
+  .card-body .box:nth-child(1),
+  .card-body .box:nth-child(2),
+  .card-body .box:nth-child(3) {
+    text-align: center;
+    width: 100%;
+  }
+  .card-body .box .links li.active::before {
+    display: none;
+  }
+}
